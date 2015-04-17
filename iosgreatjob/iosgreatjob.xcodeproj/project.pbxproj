@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		397257ACC3C2E70D979D8363 /* libPods-iosgreatjob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A0DED17290D7B0FDC40FA2A /* libPods-iosgreatjob.a */; };
 		C24D30AC1AE1886500DC133A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C24D30AB1AE1886500DC133A /* main.m */; };
 		C24D30AF1AE1886500DC133A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C24D30AE1AE1886500DC133A /* AppDelegate.m */; };
 		C24D30B21AE1886500DC133A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C24D30B11AE1886500DC133A /* ViewController.m */; };
@@ -27,6 +28,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A575785BC3ADB7BFF830D32 /* Pods-iosgreatjob.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iosgreatjob.release.xcconfig"; path = "Pods/Target Support Files/Pods-iosgreatjob/Pods-iosgreatjob.release.xcconfig"; sourceTree = "<group>"; };
+		5A0DED17290D7B0FDC40FA2A /* libPods-iosgreatjob.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iosgreatjob.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C24D30A61AE1886500DC133A /* iosgreatjob.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iosgreatjob.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C24D30AA1AE1886500DC133A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C24D30AB1AE1886500DC133A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -40,6 +43,7 @@
 		C24D30BF1AE1886500DC133A /* iosgreatjobTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iosgreatjobTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C24D30C41AE1886500DC133A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C24D30C51AE1886500DC133A /* iosgreatjobTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iosgreatjobTests.m; sourceTree = "<group>"; };
+		E35D91501C3E310F36286807 /* Pods-iosgreatjob.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iosgreatjob.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iosgreatjob/Pods-iosgreatjob.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				397257ACC3C2E70D979D8363 /* libPods-iosgreatjob.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,12 +65,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		33D08281DF8241CC292E064F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E35D91501C3E310F36286807 /* Pods-iosgreatjob.debug.xcconfig */,
+				0A575785BC3ADB7BFF830D32 /* Pods-iosgreatjob.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		C24D309D1AE1886500DC133A = {
 			isa = PBXGroup;
 			children = (
 				C24D30A81AE1886500DC133A /* iosgreatjob */,
 				C24D30C21AE1886500DC133A /* iosgreatjobTests */,
 				C24D30A71AE1886500DC133A /* Products */,
+				33D08281DF8241CC292E064F /* Pods */,
+				D6F5F55652DF12647783D54F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -119,6 +135,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		D6F5F55652DF12647783D54F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5A0DED17290D7B0FDC40FA2A /* libPods-iosgreatjob.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -126,9 +150,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C24D30C91AE1886500DC133A /* Build configuration list for PBXNativeTarget "iosgreatjob" */;
 			buildPhases = (
+				E4C04DAD1046801FD4ABD895 /* Check Pods Manifest.lock */,
 				C24D30A21AE1886500DC133A /* Sources */,
 				C24D30A31AE1886500DC133A /* Frameworks */,
 				C24D30A41AE1886500DC133A /* Resources */,
+				03380F097AE9D1DAC50754E8 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -213,6 +239,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		03380F097AE9D1DAC50754E8 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iosgreatjob/Pods-iosgreatjob-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E4C04DAD1046801FD4ABD895 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C24D30A21AE1886500DC133A /* Sources */ = {
@@ -347,8 +406,10 @@
 		};
 		C24D30CA1AE1886500DC133A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E35D91501C3E310F36286807 /* Pods-iosgreatjob.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = iosgreatjob/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -357,6 +418,7 @@
 		};
 		C24D30CB1AE1886500DC133A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0A575785BC3ADB7BFF830D32 /* Pods-iosgreatjob.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = iosgreatjob/Info.plist;
@@ -418,6 +480,7 @@
 				C24D30CB1AE1886500DC133A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C24D30CC1AE1886500DC133A /* Build configuration list for PBXNativeTarget "iosgreatjobTests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +489,7 @@
 				C24D30CE1AE1886500DC133A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

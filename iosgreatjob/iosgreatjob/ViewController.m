@@ -8,8 +8,13 @@
 
 #import "ViewController.h"
 
-@interface ViewController ()
+@interface ViewController () <
+UINavigationControllerDelegate,
+UIImagePickerControllerDelegate
+>
+
 @property (nonatomic, strong) UIImagePickerController *picker;
+
 @end
 
 @implementation ViewController
@@ -26,12 +31,31 @@
 
 - (IBAction)buttonPressed:(id)sender {
     self.picker = [[UIImagePickerController alloc] init];
+    self.picker.sourceType = UIImagePickerControllerSourceTypeCamera;
+    self.picker.delegate = self;
     
     [self presentViewController:self.picker
                        animated:YES
-                     completion:^{
-                         
-                     }];
+                     completion:nil];
+}
+
+#pragma mark - UIImagePickerControllerDelegate
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
+    [self.picker dismissViewControllerAnimated:YES
+                                    completion:nil];
+    UIImage *image = [info objectForKey:UIImagePickerControllerOriginalImage];
+    
+    NSDictionary *metaData = [info objectForKey:UIImagePickerControllerMediaMetadata];
+    //NSLog(@"metaData: %@", metaData);
+    NSLog(@"image: %@", image);
+    
+    
+    
+}
+
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
+    [self.picker dismissViewControllerAnimated:YES
+                                    completion:nil];
 }
 
 @end
