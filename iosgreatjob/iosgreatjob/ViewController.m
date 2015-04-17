@@ -9,7 +9,7 @@
 #import "ViewController.h"
 
 @interface ViewController ()
-
+@property (nonatomic, strong) UIImagePickerController *picker;
 @end
 
 @implementation ViewController
@@ -22,6 +22,16 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)buttonPressed:(id)sender {
+    self.picker = [[UIImagePickerController alloc] init];
+    
+    [self presentViewController:self.picker
+                       animated:YES
+                     completion:^{
+                         
+                     }];
 }
 
 @end
